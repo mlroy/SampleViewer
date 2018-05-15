@@ -7,12 +7,34 @@
 //
 
 import UIKit
+import PDFKit
 
 class ViewController: UIViewController {
 
+    // Will use a PDFDocument to assign to the PDFView here.
+    @IBOutlet weak var PDFViewingArea: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //
+        let v1 = UIView(frame:CGRect(x:113, y:111, width:132, height:194))
+        v1.backgroundColor = .red
+        // first: let v2 = UIView(frame:CGRect(x:41, y:56, width:132, height: 194))
+        let v2 = UIView(frame:v1.bounds.insetBy(dx: 10, dy: 10))
+        v2.backgroundColor = UIColor(red: 0.5, green: 1, blue: 0.75, alpha: 1)
+        let v3 = UIView(frame:CGRect(x:43, y:197, width:160, height: 230))
+        v3.backgroundColor = UIColor.brown
+        self.view.addSubview(v1)
+        v1.addSubview(v2)
+        v2.transform = CGAffineTransform(rotationAngle: 60 * .pi/180).translatedBy(x: 100, y: 0)
+        print(v1.frame)
+        self.view.addSubview(v3)
+        //
+        // bounds of the view area:  PDFViewingArea.bounds
+        // of for the current view:  self.view.bounds
+        let pv = UIView(frame:CGRect(x:150, y:400, width:50, height:50))
+        pv.backgroundColor = .green
+        PDFViewingArea.addSubview(pv)
     }
 
     override func didReceiveMemoryWarning() {
