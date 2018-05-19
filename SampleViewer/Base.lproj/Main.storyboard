@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,21 +19,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjW-n7-dgG">
-                                <rect key="frame" x="16" y="66" width="343" height="581"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68W-vn-M9f">
-                                <rect key="frame" x="16" y="27" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68W-vn-M9f">
+                                <rect key="frame" x="15" y="27.5" width="344" height="20.5"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                </variation>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjW-n7-dgG">
+                                <rect key="frame" x="16" y="78" width="343" height="569"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-Se-Qog" userLabel="No longer viewable in landscape">
+                                <rect key="frame" x="15" y="40" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Portrait"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ro-bY-sch">
+                                <rect key="frame" x="555" y="40" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="5br-BY-Chx"/>
+                                </constraints>
+                                <state key="normal" title="Landscape"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="gjW-n7-dgG" firstAttribute="trailing" secondItem="68W-vn-M9f" secondAttribute="trailing" id="BEk-Mu-seT"/>
+                            <constraint firstItem="gjW-n7-dgG" firstAttribute="top" secondItem="4ro-bY-sch" secondAttribute="bottom" constant="8" symbolic="YES" id="Cvg-6z-Y90"/>
+                            <constraint firstItem="gjW-n7-dgG" firstAttribute="leading" secondItem="68W-vn-M9f" secondAttribute="leading" constant="1" id="EML-Pn-8hL"/>
+                            <constraint firstItem="gjW-n7-dgG" firstAttribute="leading" secondItem="IB3-ES-RuG" secondAttribute="leading" constant="16" id="GKD-Sr-Mbs"/>
+                            <constraint firstItem="gjW-n7-dgG" firstAttribute="top" secondItem="68W-vn-M9f" secondAttribute="bottom" constant="30" id="Kei-oB-DyZ"/>
+                            <constraint firstItem="4ro-bY-sch" firstAttribute="trailing" secondItem="68W-vn-M9f" secondAttribute="trailing" id="RXe-cu-kxB"/>
+                            <constraint firstItem="IB3-ES-RuG" firstAttribute="bottom" secondItem="gjW-n7-dgG" secondAttribute="bottom" constant="20" id="j3R-id-fmf"/>
+                            <constraint firstItem="gjW-n7-dgG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="78" id="lhM-t0-c50"/>
+                            <constraint firstItem="gjW-n7-dgG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oYu-fS-u2o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IB3-ES-RuG"/>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="dLD-Se-Qog"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="4ro-bY-sch"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="PDFViewingArea" destination="gjW-n7-dgG" id="YBz-d1-VFD"/>
@@ -41,7 +80,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="UXP-g9-Nek"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="135.32608695652175" y="130.43478260869566"/>
         </scene>
     </scenes>
 </document>
