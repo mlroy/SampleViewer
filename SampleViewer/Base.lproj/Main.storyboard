@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,23 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68W-vn-M9f">
-                                <rect key="frame" x="15" y="27.5" width="344" height="20.5"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                </variation>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjW-n7-dgG">
-                                <rect key="frame" x="16" y="78" width="343" height="569"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </variation>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-Se-Qog" userLabel="No longer viewable in landscape">
                                 <rect key="frame" x="15" y="40" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,18 +30,26 @@
                                 </constraints>
                                 <state key="normal" title="Landscape"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dP-Q8-hT5">
+                                <rect key="frame" x="15" y="30" width="344" height="20.5"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAU-of-obM">
+                                <rect key="frame" x="15" y="78" width="344" height="569"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gjW-n7-dgG" firstAttribute="trailing" secondItem="68W-vn-M9f" secondAttribute="trailing" id="BEk-Mu-seT"/>
-                            <constraint firstItem="gjW-n7-dgG" firstAttribute="top" secondItem="4ro-bY-sch" secondAttribute="bottom" constant="8" symbolic="YES" id="Cvg-6z-Y90"/>
-                            <constraint firstItem="gjW-n7-dgG" firstAttribute="leading" secondItem="68W-vn-M9f" secondAttribute="leading" constant="1" id="EML-Pn-8hL"/>
-                            <constraint firstItem="gjW-n7-dgG" firstAttribute="leading" secondItem="IB3-ES-RuG" secondAttribute="leading" constant="16" id="GKD-Sr-Mbs"/>
-                            <constraint firstItem="gjW-n7-dgG" firstAttribute="top" secondItem="68W-vn-M9f" secondAttribute="bottom" constant="30" id="Kei-oB-DyZ"/>
-                            <constraint firstItem="4ro-bY-sch" firstAttribute="trailing" secondItem="68W-vn-M9f" secondAttribute="trailing" id="RXe-cu-kxB"/>
-                            <constraint firstItem="IB3-ES-RuG" firstAttribute="bottom" secondItem="gjW-n7-dgG" secondAttribute="bottom" constant="20" id="j3R-id-fmf"/>
-                            <constraint firstItem="gjW-n7-dgG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="78" id="lhM-t0-c50"/>
-                            <constraint firstItem="gjW-n7-dgG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oYu-fS-u2o"/>
+                            <constraint firstItem="9dP-Q8-hT5" firstAttribute="centerX" secondItem="IB3-ES-RuG" secondAttribute="centerX" id="102-2B-ns3"/>
+                            <constraint firstItem="9dP-Q8-hT5" firstAttribute="top" secondItem="IB3-ES-RuG" secondAttribute="top" constant="10" id="4yv-9b-OWd"/>
+                            <constraint firstItem="9dP-Q8-hT5" firstAttribute="leading" secondItem="IB3-ES-RuG" secondAttribute="leading" constant="15" id="UK6-Md-ZUj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IB3-ES-RuG"/>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -74,13 +64,13 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="PDFViewingArea" destination="gjW-n7-dgG" id="YBz-d1-VFD"/>
+                        <outlet property="SampleSongImage" destination="BAU-of-obM" id="TKj-DL-T1T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="UXP-g9-Nek"/>
             </objects>
-            <point key="canvasLocation" x="135.32608695652175" y="130.43478260869566"/>
+            <point key="canvasLocation" x="135.19999999999999" y="129.98500749625188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gSn-TB-pWk">
@@ -223,6 +213,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsY-kb-SLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="948" y="132.68365817091455"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="P4t-QY-oYC">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ZO0-7m-tr1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="se8-Fs-ja0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="133"/>
         </scene>
     </scenes>
 </document>
