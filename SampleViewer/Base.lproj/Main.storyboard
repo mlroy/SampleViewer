@@ -40,12 +40,8 @@
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAU-of-obM">
-                                <rect key="frame" x="15" y="78" width="344" height="569"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9dP-Q8-hT5" firstAttribute="centerX" secondItem="IB3-ES-RuG" secondAttribute="centerX" id="102-2B-ns3"/>
                             <constraint firstItem="9dP-Q8-hT5" firstAttribute="top" secondItem="IB3-ES-RuG" secondAttribute="top" constant="10" id="4yv-9b-OWd"/>
@@ -64,7 +60,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="SampleSongImage" destination="BAU-of-obM" id="TKj-DL-T1T"/>
+                        <outlet property="FileNameLabel" destination="9dP-Q8-hT5" id="atk-5f-CLV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

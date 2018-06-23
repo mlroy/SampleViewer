@@ -12,6 +12,9 @@
 		C96F1D9920A1476E00901E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F1D9720A1476E00901E2D /* Main.storyboard */; };
 		C96F1D9B20A1477000901E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96F1D9A20A1477000901E2D /* Assets.xcassets */; };
 		C96F1D9E20A1477000901E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F1D9C20A1477000901E2D /* LaunchScreen.storyboard */; };
+		C98BA4F020D5804E0043AF4E /* Adoramus Te Christe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C98BA4EF20D5804E0043AF4E /* Adoramus Te Christe.pdf */; };
+		C98BA4F220D584A00043AF4E /* Amazing Grace.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C98BA4F120D584A00043AF4E /* Amazing Grace.pdf */; };
+		C98BA4F420D585410043AF4E /* Sample Music in Resources */ = {isa = PBXBuildFile; fileRef = C98BA4F320D585400043AF4E /* Sample Music */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		C96F1D9A20A1477000901E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96F1D9D20A1477000901E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C96F1D9F20A1477000901E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98BA4EF20D5804E0043AF4E /* Adoramus Te Christe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Adoramus Te Christe.pdf"; sourceTree = "<group>"; };
+		C98BA4F120D584A00043AF4E /* Amazing Grace.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Amazing Grace.pdf"; sourceTree = "<group>"; };
+		C98BA4F320D585400043AF4E /* Sample Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Sample Music"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,9 @@
 		C96F1D8720A1476C00901E2D = {
 			isa = PBXGroup;
 			children = (
+				C98BA4F320D585400043AF4E /* Sample Music */,
+				C98BA4F120D584A00043AF4E /* Amazing Grace.pdf */,
+				C98BA4EF20D5804E0043AF4E /* Adoramus Te Christe.pdf */,
 				C96F1D9220A1476D00901E2D /* SampleViewer */,
 				C96F1D9120A1476D00901E2D /* Products */,
 			);
@@ -124,7 +133,10 @@
 			files = (
 				C96F1D9E20A1477000901E2D /* LaunchScreen.storyboard in Resources */,
 				C96F1D9B20A1477000901E2D /* Assets.xcassets in Resources */,
+				C98BA4F020D5804E0043AF4E /* Adoramus Te Christe.pdf in Resources */,
+				C98BA4F420D585410043AF4E /* Sample Music in Resources */,
 				C96F1D9920A1476E00901E2D /* Main.storyboard in Resources */,
+				C98BA4F220D584A00043AF4E /* Amazing Grace.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
