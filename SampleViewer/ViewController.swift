@@ -10,11 +10,14 @@ import UIKit
 import PDFKit
 
 class ViewController: UIViewController {
-
     // Will use a PDFDocument to assign to the PDFView here.
     // @IBOutlet weak var PDFViewingArea: UIView!
     // @IBOutlet weak var PDFPageControl: UIPageControl!
     @IBOutlet weak var FileNameLabel: UILabel!
+    @IBOutlet weak var SongView: UIView!
+    
+    // The current song
+    let pv: PDFView = PDFView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +46,11 @@ class ViewController: UIViewController {
         let mainBundle = Bundle.main
         // var pv: PDFView = PDFView(frame:self.view.bounds.insetBy(dx: 10, dy: 10))
         // TODO: try adding a UIView object with constraints, then make this PDFView a subview of it.
-        let pv: PDFView = PDFView(frame:self.view.bounds.insetBy(dx: 15, dy: 30))
+        // let pv: PDFView = PDFView(frame:self.view.bounds)
+        pv.frame = self.view.bounds.insetBy(dx: 0, dy: 0)
+        // This is the correct way to do it, but I also need to scale the pv so that it's displayed correctly
+        // pv.frame = SongView.frame
+        // pv.scaleFactor = 3.0
         // from Programming iOS 11, chapter 22, PDFs
         //let songurl = mainBundle.url(forResource: "Song1", withExtension: "pdf")
         let otherurl = mainBundle.url(forResource: songTitle, withExtension: "pdf")
@@ -52,9 +59,11 @@ class ViewController: UIViewController {
         pv.document = doc
         pv.displayDirection = PDFDisplayDirection.horizontal
         pv.usePageViewController(true)
-        // pv.displayMode = PDFDisplayMode.singlePage
+        setDisplayMode()
+        pv.backgroundColor = UIColor(hue: 0.1388, saturation: 0.12, brightness: 0.98, alpha: 1)
+        // pv.displayMode = PDFDisplayMode.singlePageContinuous
         // pv.autoScales = true
-        self.view.addSubview(pv)
+        SongView.addSubview(pv)
         FileNameLabel.text = songTitle
         
         /* Display this song as an image.
@@ -71,6 +80,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        /*
+        setDisplayMode()
+        pv.frame = self.view.bounds
+        pv.autoScales = true
+        /* */
+        pv.layoutDocumentView()
+        */
+    }
+    
+    func setDisplayMode() {
+        // We're landscape
+        if (self.view.frame.height < self.view.frame.width) {
+            pv.displayMode = PDFDisplayMode.twoUp
+        }
+            // We're portrait
+        else {
+            pv.displayMode = PDFDisplayMode.singlePage
+        }
+    }
 }
 
